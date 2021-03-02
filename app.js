@@ -69,13 +69,24 @@ function showPerson(person) {
 }
 
 
-// show person 
+// show next person 
 
 nextBtn.addEventListener('click', function () {
   currentItem++;
-  showPerson(currentItem)
+  if(currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem);
 });
-  
+
+// show prev person 
+prevBtn.addEventListener('click', function () {
+  currentItem++;
+  if(currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+});
 
 
 
